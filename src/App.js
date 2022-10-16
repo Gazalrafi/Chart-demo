@@ -1,10 +1,15 @@
-
+import  './App.css'
 function App(){
-    return <div>
+    const  locationOfExpenditure='market';
+
+    return <div className='expense'>
         <h1>Expense items</h1>
-        <p1>Food Rs 10<br/></p1>
-        <p1>Petrol Rs 100<br/></p1>
-        <p1>Movies Rs 200<br/></p1>
+        <p1>Food </p1>
+        <div className='expense1'>Rs 10 {locationOfExpenditure}</div>
+        <p1>Petrol</p1>
+        <div className='expense2'>Rs 100 {locationOfExpenditure}</div>
+        <p1>Movies </p1>
+        <div className='expense3'>Rs 200 {locationOfExpenditure}</div>
     </div>
     ;
 
