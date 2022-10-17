@@ -1,17 +1,52 @@
-import  './App.css'
+import Expense from'./components/Expense';
 function App(){
-    const  locationOfExpenditure='market';
-
-    return <div className='expense'>
-        <h1>Expense items</h1>
-        <p1>Food </p1>
-        <div className='expense1'>Rs 10 {locationOfExpenditure}</div>
-        <p1>Petrol</p1>
-        <div className='expense2'>Rs 100 {locationOfExpenditure}</div>
-        <p1>Movies </p1>
-        <div className='expense3'>Rs 200 {locationOfExpenditure}</div>
-    </div>
-    ;
-
+    let expenses=[
+        {
+            id:'e1',
+            title:'Food',
+            amount:10,
+            location:'Restaurant',
+            date:new Date(2021,5,12)
+        },
+        {
+            id:'e2',
+            title:'Petrol',
+            amount:100,
+            location:'Petrol pump',
+            date:new Date(2021,5,14)
+        },
+        {
+            id:'e3',
+            title:'Movies',
+            amount:100,
+            location:'Theatre',
+            date:new Date(2021,5,30)
+        }
+        
+    ];
+   
+    return (
+        <div>
+        < Expense
+        date={expenses[0].date}
+        title={expenses[0].title}
+        amount={expenses[0].amount}
+        location={expenses[0].location}>
+        </Expense>
+        < Expense
+        date={expenses[1].date}
+        title={expenses[1].title}
+        amount={expenses[1].amount}
+        location={expenses[1].location}>
+        </Expense>
+        < Expense
+        date={expenses[2].date}
+        title={expenses[2].title}
+        amount={expenses[2].amount}
+        location={expenses[2].location}>
+        </Expense>
+            </div>
+       );
+    
 }
 export default App;
