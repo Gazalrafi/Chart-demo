@@ -1,24 +1,24 @@
-import Expense from'./components/Expense';
+import Expense from'./components/Expense.js';
 function App(){
     let expenses=[
         {
             id:'e1',
             title:'Food',
-            amount:10,
+            amount:"Rs.10",
             location:'Restaurant',
             date:new Date(2021,5,12)
         },
         {
             id:'e2',
             title:'Petrol',
-            amount:100,
+            amount:"Rs.100",
             location:'Petrol pump',
             date:new Date(2021,5,14)
         },
         {
             id:'e3',
             title:'Movies',
-            amount:100,
+            amount:"Rs.100",
             location:'Theatre',
             date:new Date(2021,5,30)
         }

@@ -1,19 +1,19 @@
+import ExpenseDate from './ExpenseDate.js';
+import './Expense.css';
+import ExpenseAmount from './ExpenseAmount.js';
+import Card from './Card.js';
 function Expense(props){
-    const month=props.date.toLocaleString('en-US',{month:'long'});
-    const year=props.date.getFullYear();
-    const day=props.date.toLocaleString('en-US',{day:'2-digit'});
-
+   
     return(
-        <div className='expense-item'>
-        <div>
-           <div>{month}</div>
-           <div>{year}</div>
-           <div>{day}</div>
-        </div>
-        <div class='expense-item_descript'><h2>{props.title}</h2></div>
-        <div className='expense-item__price'>{props.amount}</div>
+        
+        <Card className='expense-item'>
+    
+        <div className='expense-item__title'>{props.title}</div>
+        <ExpenseDate date={props.date} />
+        <ExpenseAmount amount={props.amount} />
         <div className='expense-item__location'>{props.location}</div>
-           </div>
+
+        </Card>
     );
 }
 export default Expense;
