@@ -1,5 +1,6 @@
+import React from "react";
 import './Expense.css';
-function ExpenseAmount(props){
+const ExpenseAmount=(props)=>{
     
     return (
       <div>

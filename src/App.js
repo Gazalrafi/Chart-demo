@@ -1,4 +1,6 @@
-import Expense from'./components/Expense.js';
+import React from "react";
+import ExpensesMain from'./components/Expenses/ExpensesMain.js';
+
 function App(){
     let expenses=[
         {
@@ -27,25 +29,9 @@ function App(){
    
     return (
         <div>
-        < Expense
-        date={expenses[0].date}
-        title={expenses[0].title}
-        amount={expenses[0].amount}
-        location={expenses[0].location}>
-        </Expense>
-        < Expense
-        date={expenses[1].date}
-        title={expenses[1].title}
-        amount={expenses[1].amount}
-        location={expenses[1].location}>
-        </Expense>
-        < Expense
-        date={expenses[2].date}
-        title={expenses[2].title}
-        amount={expenses[2].amount}
-        location={expenses[2].location}>
-        </Expense>
-            </div>
+            <h2>Expense Tracker</h2>
+            <ExpensesMain item={expenses}/>
+        </div>
        );
     
 }
