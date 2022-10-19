@@ -1,6 +1,6 @@
 import React from "react";
 import ExpensesMain from'./components/Expenses/ExpensesMain.js';
-
+import NewExpense from "./components/NewExpenses/NewExpense.js";
 function App(){
     let expenses=[
         {
@@ -20,7 +20,7 @@ function App(){
         {
             id:'e3',
             title:'Movies',
-            amount:"Rs.100",
+            amount:"Rs.200",
             location:'Theatre',
             date:new Date(2021,5,30)
         }
@@ -29,7 +29,8 @@ function App(){
    
     return (
         <div>
-            <h2>Expense Tracker</h2>
+            
+            <NewExpense/>
             <ExpensesMain item={expenses}/>
         </div>
        );

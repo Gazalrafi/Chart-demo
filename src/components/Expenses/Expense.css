@@ -5,8 +5,11 @@ body{
     background-color: beige;
     border: 3px;
 }
-.expense-item{
+.expense-item {
 display:flex;
+flex-direction: column;
+width: 20rem;
+height: 20rem;
 justify-content:space-between;
 align-items:center;
 box-shadow:0 2px 8px rgba(0,0,0,1.00);
