@@ -1,6 +1,5 @@
-
 body{
-    background-color: aqua;
+    background-color: rgb(92, 107, 95);
 }
 .expense-item__title{
     background-color: beige;
@@ -33,30 +32,3 @@ background-color: #4b4b4b;
     margin:0 1rem;
     color:white;
 }
-
-.expense-item__price{
-    font-size: 1rem;
-    font-weight: bold;
-    color:white;
-    background-color: #40005d;
-    border: 1px solid white;
-    padding: 0.5rem;
-    border-radius: 12px;
-}
-.expense-item_descript{
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    flex:1;
-}
-.expense-item__price{
-    font-size: 1.25rem;
-    padding: 0.5rem 1.5rem;
-}
-
-.expense-item__location{
- display:flex;
- margin: 0 1 rem;
- border:1px solid;
-}
-
