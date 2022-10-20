@@ -1,42 +1,21 @@
 import React,{useState} from "react";
 import './ExpenseForm.css';
 
-const ExpenseForm=()=>{
-    // const[enteredTitle,setEnteredTitle]=useState('');
-    // const[enteredAmount,setEnteredAmount]=useState('');
-    // const[enteredDate,setEnteredDate]=useState('');
-
-    const[userInput,setUserInput]=useState({
-        enteredTitle:'',
-        enteredAmount:'',
-        enteredDate:''
-    });
+const ExpenseForm=(props)=>{
+    const[enteredTitle,setEnteredTitle]=useState('');
+    const[enteredAmount,setEnteredAmount]=useState('');
+    const[enteredDate,setEnteredDate]=useState('');
 
     const titleChangeHandler=(event)=>{
-        //setEnteredTitle(event.target.value);
-        setUserInput({
-            ...userInput, //first we copy userInput objects here because if we don't copy then
-            // the setUserInput objects will be updated and key value
-            //pairs of enteredAmount and enteredDate will be lost.
-            enteredTitle:event.target.value,
-        });
-    
-
+        setEnteredTitle(event.target.value);
+        
     };
     const amountChangeHandler=(event)=>{
-        //setEnteredAmount(event.target.value);
-        setUserInput({
-            ...userInput,
-            enteredAmount:event.target.value,
-        })
+        setEnteredAmount(event.target.value);
         
     };
     const dateChangeHandler=(event)=>{
-       //setEnteredDate(event.target.value);
-       setUserInput({
-        ...userInput,
-        enteredDate:event.target.value,
-    })
+       setEnteredDate(event.target.value);
         
     };
     const submitHandler=(event)=>{
@@ -47,7 +26,10 @@ const ExpenseForm=()=>{
         amount:enteredAmount,
         date:new Date(enteredDate)
     }
+    props.onSaveExpenseData(expenseData);
+
     console.log(expenseData)
+
     setEnteredTitle('');
     setEnteredAmount('');
     setEnteredDate('');
