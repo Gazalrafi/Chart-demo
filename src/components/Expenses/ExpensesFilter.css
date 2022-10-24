@@ -1,0 +1,12 @@
+ h3{
+    box-sizing: border-box;
+    border-color: white;
+    background-color: rgb(230, 127, 204);
+    font-size:larger;
+    
+}
+.expenses-select{
+    background-color:rgb(243, 53, 53) ;
+    border:white;
+}
+
