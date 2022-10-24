@@ -20,7 +20,9 @@ return (
      <ExpensesFilter
       selected={FilteredYear}
       onChangeFilter={saveYearHandler}/>
-    {   filteredExpenses.map( expensemain=>(
+    {filteredExpenses.length===0 && <p>No expenses found.</p>}
+    {filteredExpenses.length>0 &&
+      filteredExpenses.map( expensemain=>(
          
                 < Expense
                     key={expensemain.id}
